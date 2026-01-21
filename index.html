@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blockly Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+  <!-- Blockly Workspace -->
+  <div id="blocklyDiv"></div>
+
+  <!-- Side Panel -->
+  <div id="sidePanel">
+    <h3>Generated Code</h3>
+    <textarea id="codeArea"></textarea>
+
+    <h3>Output</h3>
+    <div id="output"></div>
+
+    <div class="buttons">
+      <button onclick="generateCode()">Generate</button>
+      <button onclick="runCode()">Run</button>
+      <button onclick="clearWorkspace()">Clear</button>
+    </div>
+  </div>
+</div>
+
+<!-- Blockly Libraries -->
+<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+<script src="https://unpkg.com/blockly/javascript.min.js"></script>
+
+<!-- Custom Files -->
+<script src="blocks.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
