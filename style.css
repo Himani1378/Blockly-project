@@ -45,6 +45,8 @@ html, body {
   resize: vertical;
 }
 
+
+
 #output {
   background: #000;
   color: #00ff00;
@@ -67,26 +69,67 @@ html, body {
   cursor: pointer;
 }
 
+/* Hide all Blockly controls */
+.blocklyZoom,
+.blocklyFlyoutScrollbar,
+.blocklyScrollbarVertical,
+.blocklyScrollbarHorizontal {
+  display: none !important;
+}
+
+/* Keep trashcan visible */
+.blocklyTrash {
+  display: block !important;
+}
+
+
+
 @media (max-width: 768px) {
+
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
 
   #container {
     flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+    .blocklyToolboxDiv {
+    width: 130px !important;
   }
 
   #blocklyWrapper {
-    height: 55vh;
+    height: 50vh;
     width: 100%;
   }
 
   #sidePanel {
     width: 100%;
     min-width: unset;
-    height: 45vh;
+    height: auto;
+    max-height: 50vh;
+    overflow-y: auto;
     border-left: none;
     border-top: 1px solid #ddd;
+    padding-bottom: 60px; 
+  }
+
+  #blocklyDiv {
+    right: 0;
+    left: 0;
+  }
+
+  .buttons {
+    margin-bottom: 40px;
   }
 
   .buttons button {
     padding: 14px;
   }
 }
+
+
+

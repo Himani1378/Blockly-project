@@ -64,3 +64,5 @@ function clearWorkspace() {
   delete window._grade;
   delete window._result;
 }
+
+
